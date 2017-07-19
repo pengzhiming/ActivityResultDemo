@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.annotation.Nullable;
 
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,17 +13,17 @@ import java.util.List;
 
 public class ActivityResultDelegate implements IActivityResult{
 
-    private final @Nullable WeakReference<Activity> activity;
+    private final @Nullable Activity activity;
 
     List<ActivityResultListener> activityResultListeners;
 
     public ActivityResultDelegate(Activity activity) {
-        this.activity = new WeakReference(activity);
+        this.activity = activity;
     }
 
     @Override
     public Activity getActivity() {
-        return activity.get();
+        return activity;
     }
 
     public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
