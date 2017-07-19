@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    android:background="#ec3f57">
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动TestResultActivity"/>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:background="#eeeeee"
+        android:text="这里将接收TestResultActivity#关闭后返回的数据"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ResultView:  在View中处理onActivityResult回调"
+        android:textColor="#ffffff"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"/>
+</LinearLayout>
