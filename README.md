@@ -25,7 +25,7 @@ public interface ActivityResultListener {
 
 public class ActivityResultDelegate implements IActivityResult{
 
-    private final @Nullable WeakReference<Activity> activity;
+    private final @Nullable Activity activity;
 
     List<ActivityResultListener> activityResultListeners;
 
@@ -35,7 +35,7 @@ public class ActivityResultDelegate implements IActivityResult{
 
     @Override
     public Activity getActivity() {
-        return activity.get();
+        return activity;
     }
 
     public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
