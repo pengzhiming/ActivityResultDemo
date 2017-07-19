@@ -1,5 +1,5 @@
 # ActivityResultDemo
-如何View中处理Activity的onActivityResult回调
+如何在View中处理Activity的onActivityResult回调
 
 public interface IActivityResult {
 
