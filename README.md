@@ -1,7 +1,6 @@
 # ActivityResultDemo
 如何View中处理Activity的onActivityResult回调
 
-// IActivityResult
 public interface IActivityResult {
 
     Activity getActivity();
@@ -13,7 +12,6 @@ public interface IActivityResult {
     void clearActivityResultListener();
 }
 
-// ActivityResultListener
 public interface ActivityResultListener {
 
     /**
@@ -25,7 +23,6 @@ public interface ActivityResultListener {
     boolean onActivityResult(int requestCode, int resultCode, Intent data);
 }
 
-// ActivityResultDelegate
 public class ActivityResultDelegate implements IActivityResult{
 
     private final @Nullable WeakReference<Activity> activity;
@@ -88,7 +85,6 @@ public class ActivityResultDelegate implements IActivityResult{
     }
 }
 
-// BaseAppCompatActivity
 public class BaseAppCompatActivity extends AppCompatActivity implements IActivityResult{
 
     private final ActivityResultDelegate mDelegate;
